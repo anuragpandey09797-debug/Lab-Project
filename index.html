@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tech Vault</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Animated background -->
+  <div id="bg-anim" aria-hidden="true"></div>
+  <canvas id="particles"></canvas>
+  
+  <!-- Rain effect -->
+  <canvas id="rain"></canvas>
+
+  <main class="panel">
+    <header class="panel-head">
+      <div class="logo">
+        <svg viewBox="0 0 48 48" width="42" height="42" aria-hidden="true" class="logo-svg">
+          <rect rx="6" width="48" height="48" fill="#00ff9f"></rect>
+          <text x="50%" y="56%" text-anchor="middle" fill="#021019" font-family="Fira Code, monospace" font-size="14" font-weight="600">AIML</text>
+        </svg>
+      </div>
+      <div>
+        <h1>Tech Vault 📖</h1>
+        <p class="muted">Personal collection of engineering notes & resources</p>
+      </div>
+    </header>
+
+    <section class="controls">
+      <div class="row">
+        <label for="yearSelect">Select Year</label>
+        <select id="yearSelect">
+          <option value="">-- Choose Year --</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="subjectSelect">Select Subject</label>
+        <select id="subjectSelect" disabled>
+          <option value="">-- Choose Subject --</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="unitSelect">Select Unit</label>
+        <select id="unitSelect" disabled>
+          <option value="">-- Choose Unit --</option>
+        </select>
+      </div>
+
+      <div class="row actions">
+        <button id="openBtn" class="btn" disabled>📖 Open Notes</button>
+        <button id="copyBtn" class="btn ghost" disabled>📋 Copy Link</button>
+      </div>
+    </section>
+
+    <section id="unitsPreview" class="units">
+      <div class="empty">
+        <div class="empty-icon">📝</div>
+        <h3>Hey there! 👋</h3>
+        <p>Pick a year and subject to find my notes. I've organized everything by units to make studying easier!</p>
+        <small style="opacity: 0.7; margin-top: 8px; display: block;">*Add your own study materials using the guide above</small>
+      </div>
+    </section>
+
+    <footer class="panel-foot">
+      <div class="status" id="status">
+        <span class="status-icon">●</span>
+        <span class="status-text">Ready.</span>
+      </div>
+      <div class="hint">
+        <span class="hint-icon">💡</span>
+        <span id="rotatingHint">Pro tip: Bookmark useful notes for quick access later!</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
